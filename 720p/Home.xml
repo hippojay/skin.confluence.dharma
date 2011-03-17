@@ -14,7 +14,7 @@
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<!-- weather Info -->
-		<control type="button" id="8999">
+		<!--<control type="button" id="8999">
 			<description>Run Recently added</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
@@ -40,7 +40,20 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(homepageShowRecentlyAdded)</visible>
-		</control>
+		</control> -->
+        <control type="button" id="8999" >
+        	<description>Plexbmc</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+            <onfocus>XBMC.RunScript(plugin.video.plexbmc,skin)</onfocus>
+			<onfocus>SetFocus(9000)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+        </control>
 		<!-- Music Info -->
 		<control type="group">
 			<posx>0</posx>
@@ -627,6 +640,67 @@
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 					</item>
+                    <item id="12">
+                        <label>$INFO[Window.Property(plexbmc.0.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.0.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.0.url)]",return)</onclick>
+   						<thumb>$INFO[Window.Property(plexbmc.0.art]</thumb>
+   						<icon>$INFO[Window.Property(plexbmc.0.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.0.title))</visible>
+                    </item>
+                    <item id="13">
+                        <label>$INFO[Window.Property(plexbmc.1.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.1.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.1.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.1.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.1.title))</visible>
+                    </item>
+                    <item id="14">
+                        <label>$INFO[Window.Property(plexbmc.2.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.2.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.2.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.2.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.2.title))</visible>
+                    </item>
+                    <item id="15">
+                        <label>$INFO[Window.Property(plexbmc.3.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.3.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.3.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.3.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.3.title))</visible>
+                    </item>
+                    <item id="16">
+                        <label>$INFO[Window.Property(plexbmc.4.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.4.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.4.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.5.title))</visible>
+                    </item>
+                    <item id="17">
+                        <label>$INFO[Window.Property(plexbmc.5.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.5.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.5.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.5.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.5.title))</visible>
+                    </item>
+                    <item id="18">
+                        <label>$INFO[Window.Property(plexbmc.6.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.6.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.6.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.6.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.6.title))</visible>
+                    </item>
+                    <item id="19">
+                        <label>$INFO[Window.Property(plexbmc.7.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.7.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.7.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.7.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.7.title))</visible>
+                    </item>
+                    <item id="20">
+                        <label>$INFO[Window.Property(plexbmc.8.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.8.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.8.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.8.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.8.title))</visible>
+                    </item>
+                    <item id="21">
+                        <label>$INFO[Window.Property(plexbmc.9.title)]</label>
+                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.9.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.9.url)]",return)</onclick>
+   						<icon>$INFO[Window.Property(plexbmc.9.art]</icon>
+                        <visible>!IsEmpty(Window.Property(plexbmc.9.title))</visible>
+                    </item>
 				</content>
 			</control>
 			<control type="image">
