@@ -578,6 +578,7 @@
 						<aligny>center</aligny>
 						<animation effect="zoom" start="75" end="100" center="380,51" time="200">Focus</animation>
 						<animation effect="zoom" start="100" end="75" center="380,51" time="200">UnFocus</animation>
+                        <visible>IntegerGreaterThan(Window.Property(plexbmc.0.numbServers),1)</visible> 
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 
