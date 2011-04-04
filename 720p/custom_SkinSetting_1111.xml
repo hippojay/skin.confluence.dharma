@@ -142,6 +142,13 @@
 						<label2>31200</label2>
 						<onclick>-</onclick>
 					</item>
+                    <!-- PLEXBMC ADDITION -->
+                    <item id="5">
+						<label>PleXBMC</label>
+						<label2>Integration</label2>
+						<onclick>-</onclick>
+					</item>
+                    <!-- END PLEXBMC ADDITION -->
 				</content>
 			</control>
 			<control type="image">
@@ -1639,6 +1646,57 @@
 						</control>
 					</control>
 				</control>
+                <!-- PLEXBMC ADDITION -->
+   				<control type="group">
+					<control type="grouplist" id="9005">
+						<visible>Container(9000).Hasfocus(5)</visible>
+						<posx>290</posx>
+						<posy>60</posy>
+						<width>750</width>
+						<height>530</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9004</onup>
+						<ondown>9004</ondown>
+						<control type="label" id="555">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>This will disable home access to XBMC media.</label>
+							<textcolor>blue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="556">
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>Enable Integration</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(plexbmcok)</onclick>
+                            <selected>Skin.HasSetting(plexbmcok)</selected>
+						</control>
+   						<control type="label" id="555">
+							<width>750</width>
+							<height>45</height>
+							<font>font13_title</font>
+							<label>Warning: You do not have plexbmc installed</label>
+							<textcolor>red</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+                            <visible>!system.HasAddon(plugin.video.plexbmc)</visible>
+						</control>
+					</control>
+				</control>
+                <!-- END PLEXBMC ADDITION-->
+                
 				<control type="scrollbar" id="61">
 					<posx>1060</posx>
 					<posy>60</posy>
