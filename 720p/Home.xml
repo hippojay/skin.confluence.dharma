@@ -1031,7 +1031,7 @@
                         <onclick>ActivateWindow($INFO[Window.Property(plexbmc.4.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.url)]",return)</onclick>
    						<icon>$INFO[Window.Property(plexbmc.4.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
-                        <visible>!IsEmpty(Window.Property(plexbmc.5.title))</visible>
+                        <visible>!IsEmpty(Window.Property(plexbmc.4.title))</visible>
                     </item>
                     <item id="17">
                         <label>$INFO[Window.Property(plexbmc.5.title)]</label>
