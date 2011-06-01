@@ -413,7 +413,7 @@
 					<font>-</font>
 					<texturefocus>HomeHasSub2.png</texturefocus>
 					<texturenofocus>HomeHasSub2.png</texturenofocus>
-					<visible>Container(9000).HasFocus(25) |Container(9000).HasFocus(24) |Container(9000).HasFocus(23) |Container(9000).HasFocus(22) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5) | Container(9000).HasFocus(7) | Container(9000).HasFocus(9) | [Container(9000).HasFocus(4) + [!IsEmpty(Skin.String(HomePictureButton1)) | !IsEmpty(Skin.String(HomePictureButton2)) | !IsEmpty(Skin.String(HomePictureButton3)) | !IsEmpty(Skin.String(HomePictureButton4)) | !IsEmpty(Skin.String(HomePictureButton5)) | !IsEmpty(Skin.String(HomePictureButton6))]] | [Container(9000).HasFocus(1) + [!IsEmpty(Skin.String(HomeProgramButton1)) | !IsEmpty(Skin.String(HomeProgramButton2)) | !IsEmpty(Skin.String(HomeProgramButton3)) | !IsEmpty(Skin.String(HomeProgramButton4)) | !IsEmpty(Skin.String(HomeProgramButton5)) | !IsEmpty(Skin.String(HomeProgramButton6))]] | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+					<visible>Container(9000).HasFocus(26) | Container(9000).HasFocus(25) |Container(9000).HasFocus(24) |Container(9000).HasFocus(23) |Container(9000).HasFocus(22) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5) | Container(9000).HasFocus(7) | Container(9000).HasFocus(9) | [Container(9000).HasFocus(4) + [!IsEmpty(Skin.String(HomePictureButton1)) | !IsEmpty(Skin.String(HomePictureButton2)) | !IsEmpty(Skin.String(HomePictureButton3)) | !IsEmpty(Skin.String(HomePictureButton4)) | !IsEmpty(Skin.String(HomePictureButton5)) | !IsEmpty(Skin.String(HomePictureButton6))]] | [Container(9000).HasFocus(1) + [!IsEmpty(Skin.String(HomeProgramButton1)) | !IsEmpty(Skin.String(HomeProgramButton2)) | !IsEmpty(Skin.String(HomeProgramButton3)) | !IsEmpty(Skin.String(HomeProgramButton4)) | !IsEmpty(Skin.String(HomeProgramButton5)) | !IsEmpty(Skin.String(HomeProgramButton6))]] | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
 					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">Conditional</animation>
 					<include>VisibleFadeEffect</include>
 				</control>
@@ -835,6 +835,82 @@
                     </control>                    
                     
                 </control>
+				<control type="grouplist" id="9026">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>240</width>
+					<height>720</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9025</onup>
+					<ondown>9025</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(26)</visible>
+                    <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                    <control type="button" id="90250">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.0.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.0.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),0)</visible> 
+                    </control>
+                    <control type="button" id="90261">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.1.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.1.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                    </control>
+                    <control type="button" id="90262">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.2.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.2.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),2)</visible> 
+                    </control>
+                    <control type="button" id="90263">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.3.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.3.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),3)</visible> 
+                    </control>
+                    <control type="button" id="90264">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.4.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.4.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),4)</visible> 
+                    </control>
+                    <control type="button" id="90265">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.5.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.5.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),5)</visible> 
+                    </control>
+                    <control type="button" id="90266">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.6.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.6.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),6)</visible> 
+                    </control>
+                    <control type="button" id="90267">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.7.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.7.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),7)</visible> 
+                    </control>
+                    <control type="button" id="90268">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.8.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.8.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),8)</visible> 
+                    </control>
+                    <control type="button" id="90269">
+                            <include>ButtonHomeSubCommonValues</include>
+                            <label>$INFO[Window.Property(plexbmc.9.server)]</label>
+                            <onclick>$INFO[Window.Property(plexbmc.9.server.channel)]</onclick>
+                            <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),9)</visible> 
+                    </control>                    
+                    
+                </control>
+                
             </control>    
 			<control type="image">
 				<posx>-450</posx>
@@ -995,7 +1071,7 @@
                     <item id="12">
                         <label>$INFO[Window.Property(plexbmc.0.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.0.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.0.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.0.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.0.path)]</onclick>
    						<thumb>$INFO[Window.Property(plexbmc.0.art)]</thumb>
    						<icon>$INFO[Window.Property(plexbmc.0.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
@@ -1004,7 +1080,7 @@
                     <item id="13">
                         <label>$INFO[Window.Property(plexbmc.1.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.1.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.1.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.1.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.1.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.1.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.1.title))</visible>
@@ -1012,7 +1088,7 @@
                     <item id="14">
                         <label>$INFO[Window.Property(plexbmc.2.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.2.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.2.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.2.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.2.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.2.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.2.title))</visible>
@@ -1020,7 +1096,7 @@
                     <item id="15">
                         <label>$INFO[Window.Property(plexbmc.3.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.3.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.3.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.3.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.3.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.3.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.3.title))</visible>
@@ -1028,15 +1104,15 @@
                     <item id="16">
                         <label>$INFO[Window.Property(plexbmc.4.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.4.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.4.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.4.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.4.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.4.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
-                        <visible>!IsEmpty(Window.Property(plexbmc.5.title))</visible>
+                        <visible>!IsEmpty(Window.Property(plexbmc.4.title))</visible>
                     </item>
                     <item id="17">
                         <label>$INFO[Window.Property(plexbmc.5.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.5.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.5.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.5.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.5.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.5.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.5.title))</visible>
@@ -1044,7 +1120,7 @@
                     <item id="18">
                         <label>$INFO[Window.Property(plexbmc.6.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.6.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.6.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.6.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.6.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.6.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.6.title))</visible>
@@ -1052,7 +1128,7 @@
                     <item id="19">
                         <label>$INFO[Window.Property(plexbmc.7.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.7.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.7.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.7.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.7.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.7.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.7.title))</visible>
@@ -1060,7 +1136,7 @@
                     <item id="20">
                         <label>$INFO[Window.Property(plexbmc.8.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.8.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.8.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.8.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.8.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.8.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.8.title))</visible>
@@ -1068,7 +1144,7 @@
                     <item id="21">
                         <label>$INFO[Window.Property(plexbmc.9.title)]</label>
                         <label2>$INFO[Window.Property(plexbmc.9.subtitle)]</label2>
-                        <onclick>ActivateWindow($INFO[Window.Property(plexbmc.9.window)],"plugin://plugin.video.plexbmc/?url=$INFO[Window.Property(plexbmc.9.url)]",return)</onclick>
+                        <onclick>$INFO[Window.Property(plexbmc.9.path)]</onclick>
    						<icon>$INFO[Window.Property(plexbmc.9.art)]</icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IsEmpty(Window.Property(plexbmc.9.title))</visible>
@@ -1080,6 +1156,7 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible>                         
+                        <visible>IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
                     <item id="22">
                         <label>Video Plug-ins</label>
@@ -1088,6 +1165,7 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                        <visible>IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
                     <item id="23">
                         <label>Picture Plug-ins</label>
@@ -1096,6 +1174,7 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible>                         
+                        <visible>IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
                     <item id="23">
                         <label>Picture Plug-ins</label>
@@ -1104,6 +1183,7 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                        <visible>IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
                     <item id="24">
                         <label>Music Plug-ins</label>
@@ -1112,6 +1192,7 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                        <visible>IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
                     <item id="24">
                         <label>Music Plug-ins</label>
@@ -1120,6 +1201,7 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                        <visible>IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
                     <item id="25">
                         <label>Plex Online</label>
@@ -1136,6 +1218,24 @@
    						<icon></icon>
                         <visible>Skin.HasSetting(plexbmcok)</visible>
                         <visible>!IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                    </item>
+                    <item id="26">
+                        <label>Channels</label>
+                        <label2>Plex</label2>
+                        <onclick>-</onclick>
+   						<icon></icon>
+                        <visible>Skin.HasSetting(plexbmcok)</visible>
+                        <visible>IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                        <visible>!IsEmpty(Window.Property(plexbmc.channel))</visible>
+                    </item>
+                    <item id="26">
+                        <label>Channels</label>
+                        <label2></label2>
+                        <onclick>$INFO[Window.Property(plexbmc.0.server.channel)]</onclick>
+   						<icon></icon>
+                        <visible>Skin.HasSetting(plexbmcok)</visible>
+                        <visible>!IntegerGreaterThan(Window.Property(plexbmc.numServers),1)</visible> 
+                        <visible>!IsEmpty(Window.Property(plexbmc.channel))</visible>
                     </item>
 
                     

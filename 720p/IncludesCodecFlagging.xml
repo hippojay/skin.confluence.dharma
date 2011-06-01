@@ -5,16 +5,16 @@
 			<width>90</width>
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoResolution),flagging/video/,.png]</texture>
 		</control>
 		<control type="image">
 			<description>Common Codec Image</description>
 			<width>90</width>
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoCodec,flagging/video/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoCodec),flagging/video/,.png]</texture>
 			<!-- Don't show if its one of the 500 divx codecs -->
-			<visible>![substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+			<visible>![substring(ListItem.Property(VideoCodec),div,left) | stringcompare(ListItem.Property(VideoCodec),dx50)]</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
@@ -22,7 +22,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/divx.png</texture>
-			<visible>[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+			<visible>[substring(ListItem.Property(VideoCodec),div,left) | stringcompare(ListItem.Property(VideoCodec),dx50)]</visible>
 		</control>
 	</include>
 	<include name="VideoTypeHackFlaggingConditions">
@@ -116,16 +116,16 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/dolbydigital.png</texture>
-			<visible>[stringcompare(ListItem.AudioCodec,ac3) + stringcompare(ListItem.AudioChannels,6)]</visible>
+			<visible>[stringcompare(ListItem.Property(AudioCodec),ac3) + stringcompare(ListItem.Property(AudioChannels),6)]</visible>
 		</control>
 		<control type="image">
 			<description>Audio Codec Image</description>
 			<width>90</width>
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
+			<texture>$INFO[ListItem.Property(AudioCodec),flagging/audio/,.png]</texture>
 			<!-- Don't show if I want the Dolby Digital Logo -->
-			<visible>![stringcompare(ListItem.AudioCodec,ac3) + stringcompare(ListItem.AudioChannels,6)]</visible>
+			<visible>![stringcompare(ListItem.Property(AudioCodec),ac3) + stringcompare(ListItem.Property(AudioChannels),6)]</visible>
 		</control>
 	</include>
 	<include name="AspectCodecFlaggingConditions">
@@ -134,7 +134,7 @@
 			<width>60</width>
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<texture>$INFO[ListItem.Property(VideoAspect),flagging/aspectratio/,.png]</texture>
 		</control>
 	</include>
 </includes>
