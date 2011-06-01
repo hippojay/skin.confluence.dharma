@@ -1,3 +1,5 @@
+[B] Forked by hippojay for PleXBMC integration[/B]
+
 [B]1.1.0[/B]
 
 - Redesigned the video and Music OSD Info and controls
