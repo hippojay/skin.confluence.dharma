@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.confluence.plexbmc"
-  version="0.4-1.1.0"
+  version="0.4.1-1.1.0"
   name="Confluence.plexbmc"
   provider-name="Jezz_X, Team XBMC.  Tweaked for PleXBMC by Hippojay">
   <requires>
