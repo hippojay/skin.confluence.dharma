@@ -1,4 +1,5 @@
 [B] Forked by hippojay for PleXBMC integration[/B]
+[B] 0.4.2 [/b] Added Plex Style watched icons
 [B] 0.4.1 [/b] Modified skin support for PleXBMC.  Added media flag support.
 
 [B]1.1.0[/B]
