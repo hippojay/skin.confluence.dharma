@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.confluence.plexbmc"
-  version="0.4.2-1.1.0"
+  version="0.4.3-1.1.0"
   name="Confluence.plexbmc"
   provider-name="Jezz_X, Team XBMC.  Tweaked for PleXBMC by Hippojay">
   <requires>
     <import addon="xbmc.gui" version="2.11"/>
-    <import addon="script.recentlyadded" version="1.0.4"/>
   </requires>
   <extension
     point="xbmc.gui.skin"

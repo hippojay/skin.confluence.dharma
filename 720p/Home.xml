@@ -1259,22 +1259,68 @@
 				<height>720</height>
 				<texture>HomeBlade_top.png</texture>
 			</control>
-			<control type="image">
-				<description>LOGO</description>
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>140</width>
-				<height>40</height>
-				<texture>XBMC_Logo.png</texture>
-			</control>
-			<control type="image">
-				<description>LOGO Mirror</description>
-				<posx>10</posx>
-				<posy>42</posy>
-				<width>140</width>
-				<height>40</height>
-				<texture diffuse="diffuse_mirror.png" flipy="true">XBMC_Logo.png</texture>
-			</control>
+            <control type="group">
+                <visible>skin.hasSetting(plexbmcok)</visible>
+                <control type="image">
+                    <description>LOGO</description>
+                    <posx>10</posx>
+                    <posy>10</posy>
+                    <width>140</width>
+                    <height>60</height>
+                    <texture>logo.png</texture>
+                </control>
+                <control type="image">
+                    <description>LOGO Mirror</description>
+                    <posx>10</posx>
+                    <posy>42</posy>
+                    <width>140</width>
+                    <height>60</height>
+                    <texture diffuse="diffuse_mirror.png" flipy="true">logo.png</texture>
+                </control>
+                <control type="label">
+                    <posx>150</posx>
+                    <posy>25</posy>
+                    <width>30</width>
+                    <height>60</height>
+                    <font>font12</font>
+                    <label>on</label>
+                </control>
+                <control type="image">
+                    <description>LOGO</description>
+                    <posx>180</posx>
+                    <posy>18</posy>
+                    <width>140</width>
+                    <height>40</height>
+                    <texture>XBMC_logo.png</texture>
+                </control>
+                <control type="image">
+                    <description>LOGO Mirror</description>
+                    <posx>180</posx>
+                    <posy>50</posy>
+                    <width>140</width>
+                    <height>40</height>
+                    <texture diffuse="diffuse_mirror.png" flipy="true">XBMC_logo.png</texture>
+                </control>
+            </control>  
+            <control type="group">
+                <visible>!skin.hasSetting(plexbmcok)</visible>
+                <control type="image">
+                    <description>LOGO</description>
+                    <posx>10</posx>
+                    <posy>10</posy>
+                    <width>140</width>
+                    <height>40</height>
+                    <texture>XBMC_logo.png</texture>
+                </control>
+                <control type="image">
+                    <description>LOGO Mirror</description>
+                    <posx>10</posx>
+                    <posy>42</posy>
+                    <width>140</width>
+                    <height>40</height>
+                    <texture diffuse="diffuse_mirror.png" flipy="true">XBMC_logo.png</texture>
+                </control>
+            </control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>100r</posy>
