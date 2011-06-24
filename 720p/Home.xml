@@ -492,7 +492,7 @@
                     <control type="button" id="90146">
                             <include>ButtonHomeSubCommonValues</include>
                             <label>PleXBMC Settings</label>
-                            <onclick>ActivateWindow(AddonSettings,plugin://plugin.video.plexbmc,return)</onclick>
+                            <onclick>XBMC.RunScript(plugin.video.plexbmc,setting)</onclick>
                             <visible>Skin.HasSetting(plexbmcok)</visible> 
                     </control>
 				</control>
